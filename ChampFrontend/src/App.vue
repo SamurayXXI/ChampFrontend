@@ -1,9 +1,16 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <el-menu
+      :default-active="activeIndex2"
+      class="el-menu-demo"
+      mode="horizontal"
+      @select="handleSelect"
+      background-color="#545c64"
+      text-color="#fff"
+      active-text-color="#ffd04b">
+      <el-menu-item index="1"><router-link to="/">Чемпионаты</router-link></el-menu-item>
+      <el-menu-item index="2"><router-link to="/about">About</router-link></el-menu-item>
+    </el-menu>
     <router-view/>
   </div>
 </template>
@@ -15,6 +22,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#app a {
+    text-decoration: none;
 }
 
 #nav {
