@@ -59,7 +59,7 @@ export default {
     },
     onOpenClick(){
       console.log("onOpenClick")
-      this.$router.push("/champs/"+this.currentRow.id+"/seasons")
+      this.$router.push({name: "Seasons", params: {id: this.currentRow.id} })
     }
   },
   mounted() {
